@@ -6,13 +6,15 @@ import './CourseInput.css';
 const CourseInput = props => {
   const [enteredValue, setEnteredValue] = useState('');
 
+  const [setValid, setIsValid] = useState(true);
+
   const goalInputChangeHandler = event => {
     setEnteredValue(event.target.value);
   };
 
   const formSubmitHandler = event => {
     if (enteredValue.trim().length === 0) {
-      return;
+      setIsValid(false);
     }
     event.preventDefault();
     props.onAddGoal(enteredValue);
