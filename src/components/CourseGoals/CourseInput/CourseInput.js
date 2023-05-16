@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Button from '../../UI/Button/Button';
+import Buttonc1 from '../../UI/Button/Button';
 // import './CourseInput.css';
 
 import styled from 'styled-components';
@@ -71,7 +71,7 @@ const CourseInput = props => {
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
       </FormControl>
-      <Button type="submit">Add Goal</Button>
+      <Buttonc1 type="submit">Add Goal</Buttonc1>
     </form >
   );
 };
