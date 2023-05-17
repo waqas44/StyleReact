@@ -13,14 +13,14 @@ const FormControl = styled.div`
   font-weight: bold;
   display: block;
   margin-bottom: 0.5rem;
-  color : ${props => (props.onInvalid ? 'red' : '#000')};
+  color : ${props => (props.invalid ? 'red' : '#000')};
 }
 
 & input {
   display: block;
   width: 100%;
-  border: 1px solid ${props => (props.onInvalid ? 'red' : '#ccc')};
-  background-color : ${props => (props.onInvalid ? '#ffd7d7' : 'transparent')};
+  border: 1px solid ${props => (props.invalid ? 'red' : '#ccc')};
+  background-color : ${props => (props.invalid ? '#ffd7d7' : 'transparent')};
 font: inherit;
 line - height: 1.5rem;
 padding: 0 0.25rem;
@@ -67,7 +67,7 @@ const CourseInput = props => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <FormControl onInvalid={!isValid}>
+      <FormControl invalid={!isValid}>
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
       </FormControl>
